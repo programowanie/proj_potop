@@ -26,7 +26,6 @@ Slav::Slav()
 	static int amountOfNames = (init(), names.size());
 	_name = names[rand() % amountOfNames];
 	_hp = baseHp = randomValue();
-	exp = 0;
 	_skill=baseSkill=randomValue();
 	_fatigue = baseFatigue = randomValue();
 	_grip=20+rand()%40;
@@ -54,11 +53,6 @@ bool Slav::damage(int value)
 	return _hp <= 0;
 }
 
-void Slav::heal()
-{
-	_hp = baseHp;
-	exp++;
-}
 
 void Slav::gripdown(int value){
 	_grip-=value;
