@@ -38,7 +38,6 @@ public:
 	int get_skill(){return _skill;}
 	void gripdown(int value);
 	bool damage(int value);
-	void heal();
 	void set_fatigue(int value);
 	void fatiguedown(int value);
 	int get_rain(){return _rain;}
