@@ -6,10 +6,7 @@
 using namespace std;
 
 
-struct weather_attidiude {
-	int w_a[8] ;  //w_a[0] to 
 
-};
 
 class Slav
 {
@@ -17,7 +14,6 @@ class Slav
 
 	string _name;
 	int _hp, baseHp;
-	int exp;
 	int _grip;
 	int _fatigue, baseFatigue;
 	int _skill, baseSkill;
@@ -29,7 +25,6 @@ class Slav
 	bool exhausted;
 	int riposte_counter;
 
-	weather_attidiude _weather_attidiude ;
 	static void init();
 
 public:
@@ -40,8 +35,6 @@ public:
 	int get_grip() {return _grip;}
 	void set_grip(int value);
 	int get_fatigue(){return _fatigue;}
-	weather_attidiude get_weather_attidiude(){return _weather_attidiude ;}
-	void set_w_a(int var1,int var2);
 	int get_skill(){return _skill;}
 	void gripdown(int value);
 	bool damage(int value);
