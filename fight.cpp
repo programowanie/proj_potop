@@ -36,10 +36,8 @@ bool fighting::slash(Slav* slavs){
 		if(_worldDice>97)
 			critickal(slavs[whoHits],slavs[1-whoHits]);
 		
-		// Jak mocno?
 		int damage = attack[whoHits]- attack[1 - whoHits];
 		
-		// Obrona
 		damage *= (rand() % 100) < slavs[1-whoHits].get_skill()
 			? 1 - (slavs[1-whoHits]._weapon.get_defence() / 100.)
 			: 1;
@@ -50,7 +48,7 @@ bool fighting::slash(Slav* slavs){
 				isLethal=0;
 		}
 		else{
-		// Uderz
+			
 		 isLethal = slavs[1 - whoHits].damage(damage);
 
 		printf(" [%2i, %2i] uderza %s z siłą %i grip=[%i,%i]\n ", 
@@ -60,7 +58,6 @@ bool fighting::slash(Slav* slavs){
 
 		riposte(slavs[1-whoHits],slavs[whoHits],damage);
 		}
-		//Zmiejszanie grip-u 
 			
 				slavs[1-whoHits].gripdown(1);
 		checkGrip(slavs);
